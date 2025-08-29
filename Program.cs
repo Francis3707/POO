@@ -20,24 +20,37 @@ public class Coche
 
 }
 // Clase principal
-class Program
+class Principal
 {
     static void Main(string[] args)
     {
         Coche coche1 = new Coche("Toyota", 30);
         coche1.Acelerar(20);
+
         Coche coche2 = new Coche("Ford", 40);
         coche2.Acelerar(20);
+
         Coche123 coche3 = new Coche123();
         coche3.Acelerar(40);
+
         Coche123 coche4 = new Coche123();
         coche3.Acelerar(60);
+
         Coche123 coche5 = new Coche123();
         coche3.Acelerar(-40);
+
         Vehiculos vehiculo1 = new Vehiculos();
         vehiculo1.Arranque();
+
         Pisis pii = new Pisis();
         pii.Acelerar();
+
+        Pipirisnais vehi2 = new Waka();
+        vehi2.Sonarclaxon();
+
+        Pipirisnais vehi3 = new Pipirisnais();
+        vehi3.Sonarclaxon();
+        
 
     }
 }
@@ -78,5 +91,21 @@ public class Pisis : Vehiculos
     public void Acelerar()
     {
         Console.WriteLine("coche 2 avanzo");
+    }
+}
+// polimorfismo
+public class Pipirisnais
+{
+    public virtual void Sonarclaxon()
+    {
+        Console.WriteLine("pip pip");
+    }
+
+}
+public class Waka : Pipirisnais
+{
+    public override void Sonarclaxon()
+    {
+        Console.WriteLine("vip vip(rico)");
     }
 }
