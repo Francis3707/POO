@@ -1,8 +1,17 @@
 ﻿public class Coche
 {
     public string? Marca { get; set; }
-    public decimal? Velocidad { get; set; }
+    public int? Velocidad { get; set; }
     //crear el constructor
-    public Coche(string marca, decimal velocidad);
+    public Coche(string marca, int velocidad)
+    {
+        Marca = marca;
+        Velocidad = velocidad;
+    }
+    //metodos
+    public void Acelerar(int incremento)
+    {
+        Velocidad += incremento;
+    }
 
 }
