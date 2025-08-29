@@ -1,4 +1,5 @@
 ﻿using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 
 public class Coche
 {
@@ -29,6 +30,14 @@ class Program
         coche2.Acelerar(20);
         Coche123 coche3 = new Coche123();
         coche3.Acelerar(40);
+        Coche123 coche4 = new Coche123();
+        coche3.Acelerar(60);
+        Coche123 coche5 = new Coche123();
+        coche3.Acelerar(-40);
+        Vehiculos vehiculo1 = new Vehiculos();
+        vehiculo1.Arranque();
+        Pisis pii = new Pisis();
+        pii.Acelerar();
 
     }
 }
@@ -51,5 +60,23 @@ public class Coche123
     {
         Velocidad1 += incremento;
         Console.WriteLine($"mi chico has acelerao a {Velocidad1}Km/h");
+    }
+}
+// Herencia 
+// clase Padre
+public class Vehiculos
+{
+    public string? Marca1 { get; set; }
+    public void Arranque()
+    {
+        Console.WriteLine("Arranco");
+    }
+}
+// Clase hija
+public class Pisis : Vehiculos
+{
+    public void Acelerar()
+    {
+        Console.WriteLine("coche 2 avanzo");
     }
 }
