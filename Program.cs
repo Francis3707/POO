@@ -1,4 +1,6 @@
-﻿public class Coche
+﻿using System.Runtime.InteropServices;
+
+public class Coche
 {
     public string? Marca { get; set; }
     public int? Velocidad { get; set; }
@@ -12,7 +14,42 @@
     public void Acelerar(int incremento)
     {
         Velocidad += incremento;
-        Console.WriteLine($"El coche acelero a: {Velocidad}KM/h");
+        Console.WriteLine($"El coche marca {Marca} acelero a: {Velocidad}Km/h");
     }
 
+}
+// Clase principal
+class Program
+{
+    static void Main(string[] args)
+    {
+        Coche coche1 = new Coche("Toyota", 30);
+        coche1.Acelerar(20);
+        Coche coche2 = new Coche("Ford", 40);
+        coche2.Acelerar(20);
+        Coche123 coche3 = new Coche123();
+        coche3.Acelerar(40);
+
+    }
+}
+// encapsulamiento
+public class Coche123
+{
+    private int _velocidad1;
+    public int Velocidad1
+    {
+        get { return _velocidad1; }
+        set
+        {
+            if (value >= 0)
+                _velocidad1 = value;
+            else
+                Console.WriteLine("para atras tras tras, para atras tras tras");
+        }
+    }
+    public void Acelerar(int incremento)
+    {
+        Velocidad1 += incremento;
+        Console.WriteLine($"mi chico has acelerao a {Velocidad1}Km/h");
+    }
 }
