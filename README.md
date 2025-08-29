@@ -2,6 +2,10 @@
 # Titulo
 ### subtitulo
 ## texto
+# para iniciar una nueva consola en c#
+```bash
+dotnet new console
+```
 # Ejemplo de una clase
 ### (explicado con michis)
 ``` bash
