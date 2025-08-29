@@ -12,6 +12,7 @@
     public void Acelerar(int incremento)
     {
         Velocidad += incremento;
+        Console.WriteLine($"El coche acelero a: {Velocidad}KM/h");
     }
 
 }
