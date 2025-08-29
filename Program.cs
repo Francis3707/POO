@@ -51,6 +51,11 @@ class Principal
         Pipirisnais vehi3 = new Pipirisnais();
         vehi3.Sonarclaxon();
 
+        Perro perro1 = new Perro("doge", 10,"Golden_Retriever");
+        perro1.Hacer_sonido();
+
+        Gato gato1 = new Gato("xuxo", 5,"Siames");
+        gato1.Hacer_sonido();
 
     }
 }
@@ -108,5 +113,48 @@ public class Waka : Pipirisnais
     public override void Sonarclaxon()
     {
         Console.WriteLine("vip vip(rico)");
+    }
+}
+// Ejercicios
+// Simulacion de juego de mascotas
+public interface Imascotas
+{
+    void Hacer_sonido();
+}
+// Perros
+public class Perro : Imascotas
+{
+    public string Nombre { get; set; }
+    public int Edad { get; set; }
+    public string Raza { get; set; }
+    public Perro(string nombre, int edad, string raza)
+    {
+        Nombre = nombre;
+        Edad = edad;
+        Raza = raza;
+    }
+    public void Hacer_sonido()
+    {
+        Console.WriteLine($"guau guau(me llamo {Nombre} y soy de la raza {Raza}, tengo {Edad} años)");
+        Console.WriteLine("Guau Guau(Soy un bollo feliz Delicioso es para mí Ser horneado y amasado así Ponme en el desayuno o para almorzar Soy sabroso en la comida O también para cenar Soy un bollo feliz Delicioso es para mí Ser horneado y amasado, qué festín Segunda Parte Soy un bollo feliz Delicioso es para mí Ser horneado y amasado así Ponme en el)");
+    }
+}
+// Gato
+public class Gato : Imascotas
+{
+    public string Nombre1 { get; set; }
+    public int Edad1 { get; set; }
+    public string Raza1 { get; set; }
+
+    public Gato(string nombre1, int edad1, string raza1)
+    {
+        Nombre1 = nombre1;
+        Edad1 = edad1;
+        Raza1 = raza1;
+    }
+    public void Hacer_sonido()
+    {
+        Console.WriteLine($"Miau Miau(me llamo {Nombre1} y soy de la raza {Raza1}, tengo {Edad1} años)");
+        Console.WriteLine("Miau Miau(dame comida)");
     }
 }
