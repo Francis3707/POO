@@ -50,7 +50,7 @@ class Principal
 
         Pipirisnais vehi3 = new Pipirisnais();
         vehi3.Sonarclaxon();
-        
+
 
     }
 }
@@ -102,6 +102,7 @@ public class Pipirisnais
     }
 
 }
+// polimorfismo hijo
 public class Waka : Pipirisnais
 {
     public override void Sonarclaxon()
